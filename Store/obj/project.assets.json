@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\c project\\Store\\Store\\Store.csproj",
+      "projectUniqueName": "E:\\c project\\Store\\StoreHandling\\Store\\Store.csproj",
       "projectName": "Store",
-      "projectPath": "E:\\c project\\Store\\Store\\Store.csproj",
+      "projectPath": "E:\\c project\\Store\\StoreHandling\\Store\\Store.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "E:\\c project\\Store\\Store\\obj\\",
+      "outputPath": "E:\\c project\\Store\\StoreHandling\\Store\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
