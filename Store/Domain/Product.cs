@@ -11,5 +11,12 @@ namespace Store.Domain
         public int ProductId { get; set; }
         public string Name { get; set; }
         public long Barcode { get; set; }
+
+        public override string ToString()
+        {
+            return  this.Name + "," + this.Barcode + "," + this.ProductId;
+    }
     }
 }
+   
+    

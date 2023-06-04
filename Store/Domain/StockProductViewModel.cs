@@ -14,5 +14,11 @@ namespace Store.Domain
         public int StockId { get; set; }
         public int ProductQuantity { get; set; }
         public decimal ProductPrice { get; set; }
+        public override string ToString()
+        {
+            return this.Name+ "," + this.Barcode + "," + this.StockId + ","
+                + this.ProductId + ","
+                + this.ProductQuantity + "," + this.ProductPrice;
+        }
     }
 }

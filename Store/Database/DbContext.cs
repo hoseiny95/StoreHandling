@@ -23,19 +23,25 @@ namespace Store.Database
             FileStream Productjsonfile = File.Open($"{projectDirectory}/../Database/ProductJson.json", FileMode.OpenOrCreate);
             FileStream stockjsonfile = File.Open($"{projectDirectory}/../Database/StockJason.json", FileMode.OpenOrCreate);
             directory = projectDirectory + @"/../Database";
-            var Products = JsonSerializer.Deserialize<Product>(Productjsonfile);
-            var stocks = JsonSerializer.Deserialize<Product>(stockjsonfile);
+            var Products = JsonSerializer.Deserialize<List<Product>>(Productjsonfile);
+            var stocks = JsonSerializer.Deserialize<Stock>(stockjsonfile);
+          
 
 
             Productjsonfile.Close();
             stockjsonfile.Close();
         }
+        public List<Product> Products = new List<Product>()
+            {
+                new Product(){ Name = "Apple_456",ProductId =12,Barcode=123}
+            };
 
-        public List<Product> Products { get; set; }
         public string ProjectDirectory { get { return directory; } }
 
-        public List<Stock> stocks { get; set; }
-
+        public List<Stock> stocks = new List<Stock>()
+        {
+            new Stock(){Name = "Apple_456",ProductId =12,StockId = 1,ProductPrice = 1000,ProductQuantity = 123}
+        };
         public void productSaveChanges()
         {
             var productJsonString = JsonSerializer.Serialize(Products);

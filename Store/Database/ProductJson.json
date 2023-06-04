@@ -1,0 +1,12 @@
+[
+  {
+    "ProductId": 12,
+    "Name": "ali",
+    "Barcode": 123
+  },
+  {
+    "ProductId": 56,
+    "Name": "Salam_123",
+    "Barcode": 678
+  }
+]

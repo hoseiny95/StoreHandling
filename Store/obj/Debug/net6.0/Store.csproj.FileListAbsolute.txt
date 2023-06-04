@@ -1,0 +1,15 @@
+E:\c project\Store\StoreHandling\Store\bin\Debug\net6.0\Store.exe
+E:\c project\Store\StoreHandling\Store\bin\Debug\net6.0\Store.deps.json
+E:\c project\Store\StoreHandling\Store\bin\Debug\net6.0\Store.runtimeconfig.json
+E:\c project\Store\StoreHandling\Store\bin\Debug\net6.0\Store.dll
+E:\c project\Store\StoreHandling\Store\bin\Debug\net6.0\Store.pdb
+E:\c project\Store\StoreHandling\Store\obj\Debug\net6.0\Store.csproj.AssemblyReference.cache
+E:\c project\Store\StoreHandling\Store\obj\Debug\net6.0\Store.GeneratedMSBuildEditorConfig.editorconfig
+E:\c project\Store\StoreHandling\Store\obj\Debug\net6.0\Store.AssemblyInfoInputs.cache
+E:\c project\Store\StoreHandling\Store\obj\Debug\net6.0\Store.AssemblyInfo.cs
+E:\c project\Store\StoreHandling\Store\obj\Debug\net6.0\Store.csproj.CoreCompileInputs.cache
+E:\c project\Store\StoreHandling\Store\obj\Debug\net6.0\Store.dll
+E:\c project\Store\StoreHandling\Store\obj\Debug\net6.0\refint\Store.dll
+E:\c project\Store\StoreHandling\Store\obj\Debug\net6.0\Store.pdb
+E:\c project\Store\StoreHandling\Store\obj\Debug\net6.0\Store.genruntimeconfig.cache
+E:\c project\Store\StoreHandling\Store\obj\Debug\net6.0\ref\Store.dll
