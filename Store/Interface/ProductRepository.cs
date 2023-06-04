@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Store.Interface
 {
-    internal class ProductRepository : IProductRepository
+    public class ProductRepository : IProductRepository
     {
         private readonly DbContext dbContext;
         public ProductRepository(DbContext dbContext)

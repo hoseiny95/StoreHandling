@@ -12,6 +12,7 @@ namespace Store.Database
     {
         private string workingDirectory;
         private string projectDirectory;
+        private string directory;
 
        
 
@@ -21,7 +22,7 @@ namespace Store.Database
             projectDirectory = Directory.GetParent(workingDirectory).Parent.FullName;
             FileStream Productjsonfile = File.Open($"{projectDirectory}/../Database/ProductJson.json", FileMode.OpenOrCreate);
             FileStream stockjsonfile = File.Open($"{projectDirectory}/../Database/StockJason.json", FileMode.OpenOrCreate);
-
+            directory = projectDirectory + @"/../Database";
             var Products = JsonSerializer.Deserialize<Product>(Productjsonfile);
             var stocks = JsonSerializer.Deserialize<Product>(stockjsonfile);
 
@@ -31,6 +32,7 @@ namespace Store.Database
         }
 
         public List<Product> Products { get; set; }
+        public string ProjectDirectory { get { return directory; } }
 
         public List<Stock> stocks { get; set; }
 

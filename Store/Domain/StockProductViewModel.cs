@@ -8,6 +8,11 @@ namespace Store.Domain
 {
     public class StockProductViewModel
     {
-
+        public int ProductId { get; set; }
+        public string Name { get; set; }
+        public long Barcode { get; set; }
+        public int StockId { get; set; }
+        public int ProductQuantity { get; set; }
+        public decimal ProductPrice { get; set; }
     }
 }
