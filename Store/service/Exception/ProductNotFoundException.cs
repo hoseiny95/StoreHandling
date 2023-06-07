@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Store.Exeption
 {
-    public class UserNotFoundException : ApplicationException
+    public class ProductNotFoundException : ApplicationException
     {
-        public override string Message => "User Not Found";
+        public override string Message => "Product Not Found";
 
     }
 }

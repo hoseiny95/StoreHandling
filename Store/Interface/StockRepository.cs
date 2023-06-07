@@ -1,5 +1,6 @@
 ﻿using Store.Database;
 using Store.Domain;
+using Store.service.Exception;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace Store.Interface
         {
             if (db.stocks.Any(x => x.ProductId == productInStock.ProductId))
             {
-                Stock productold = (Stock)db.stocks.Select(x => x.ProductId = productInStock.ProductId);
+                Stock productold = db.stocks.First( x => x.ProductId == productInStock.ProductId);
                 Stock productnew = new Stock();
                 productnew.ProductId = productInStock.ProductId;
                 productnew.ProductQuantity = productInStock.ProductQuantity + productold.ProductQuantity;
@@ -50,7 +51,7 @@ namespace Store.Interface
         {
             if (GetProductQuantity(productId) >= cnt)
             {
-                Stock productinstock = (Stock)db.stocks.Select(x => x.ProductId = productId);
+                Stock productinstock = (Stock)db.stocks.First(x => x.ProductId == productId);
                 var productinstocknew = productinstock;
                 productinstocknew.ProductQuantity = GetProductQuantity(productId) - cnt;
                 db.stocks.RemoveAll(x => x.ProductId == productId);
@@ -69,8 +70,18 @@ namespace Store.Interface
 
         public int GetProductQuantity(int productId)
         {
-            Stock productinstock = (Stock)db.stocks.Select(x => x.ProductId = productId);
-            return productinstock.ProductQuantity;
+            if (db.stocks.Any(x => x.ProductId == productId))
+            {
+                Stock productinstock = (Stock)db.stocks.First(x => x.ProductId == productId);
+                return productinstock.ProductQuantity;
+
+
+            }
+            else
+            {
+                throw new ProductInStockNotFound();
+            }
+            
 
 
 

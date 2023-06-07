@@ -39,7 +39,7 @@ namespace Store.Interface
 
             var product = dbContext.Products.FirstOrDefault(x => x.ProductId == id);
             if (product == null)
-                throw new UserNotFoundException() ;
+                throw new ProductNotFoundException() ;
             return product.ToString();
 
 

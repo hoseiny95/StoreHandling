@@ -14,7 +14,7 @@ namespace Store.Database
         private string projectDirectory;
         private string directory;
 
-       
+
 
         public DbContext()
         {
@@ -23,13 +23,13 @@ namespace Store.Database
             FileStream Productjsonfile = File.Open($"{projectDirectory}/../Database/ProductJson.json", FileMode.OpenOrCreate);
             FileStream stockjsonfile = File.Open($"{projectDirectory}/../Database/StockJason.json", FileMode.OpenOrCreate);
             directory = projectDirectory + @"/../Database";
-             Products = JsonSerializer.Deserialize<List<Product>>(Productjsonfile);
-            
-         
-       
+            Products = JsonSerializer.Deserialize<List<Product>>(Productjsonfile);
+
+
+
 
             stocks = JsonSerializer.Deserialize<List<Stock>>(stockjsonfile);
-          
+
 
 
             Productjsonfile.Close();
@@ -37,13 +37,14 @@ namespace Store.Database
         }
         public List<Product> Products { get; set; }
         public List<Stock> stocks { get; set; }
-       
+
         public string ProjectDirectory { get { return directory; } }
         public void productSaveChanges()
         {
             var productJsonString = JsonSerializer.Serialize(Products);
             File.WriteAllText(@$"{projectDirectory}/../Database/ProductJson.json", productJsonString);
-        } public void StockSaveChanges()
+        }
+        public void StockSaveChanges()
         {
             var stockJsonString = JsonSerializer.Serialize(stocks);
             File.WriteAllText(@$"{projectDirectory}/../Database/StockJason.json", stockJsonString);
