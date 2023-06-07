@@ -6,6 +6,7 @@ var dbContext = new DbContext();
 var productRepository = new ProductRepository(dbContext);
 var stockRepository = new StockRepository(dbContext, productRepository);
 
+
 //try
 //{
 bool check = true;
@@ -43,11 +44,13 @@ do
             break;
         case 2:
             var products = productRepository.GetProductList();
-            foreach (var product in products)
+            Console.Clear();
+            foreach (var item in products)
             {
-                Console.WriteLine(products.ToString());
+                Console.WriteLine(item.ToString());
 
             }
+            Console.WriteLine("*********************");
 
             break;
         case 3:
@@ -77,7 +80,11 @@ do
             Console.WriteLine(stockRepository.SaleProduct(int.Parse(num[0]), int.Parse(num[1])));
             break;
         case 6:
-            Console.WriteLine(stockRepository.GetSalesProductList());
+            var allProducts = stockRepository.GetSalesProductList();
+            Console.Clear();
+            foreach (var item in allProducts)
+               Console.WriteLine(item.ToString());
+            Console.WriteLine("*********************");
             break;
         case 0:
             check = false;

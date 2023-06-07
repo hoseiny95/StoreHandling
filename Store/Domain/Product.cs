@@ -14,7 +14,7 @@ namespace Store.Domain
 
         public override string ToString()
         {
-            return  this.Name + "," + this.Barcode + "," + this.ProductId;
+            return  this.Name + "," + this.ProductId + "," + this.Barcode;
     }
     }
 }

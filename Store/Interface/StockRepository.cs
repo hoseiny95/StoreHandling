@@ -91,9 +91,9 @@ namespace Store.Interface
                                     ProductQuantity = p.ProductQuantity,
 
                                 }).ToList();
-            var writetxt = new StreamWriter(Path.Combine(db.ProjectDirectory,@"alllist.txt"));
+            var writetxt = new StreamWriter(Path.Combine(db.ProjectDirectory,@"all_List.txt"));
             foreach (var s in stocks)
-                writetxt.WriteLine(s);
+                writetxt.WriteLine(s.ToString());
 
             writetxt.Close();
 
