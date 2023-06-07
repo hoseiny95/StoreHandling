@@ -24,14 +24,7 @@ namespace Store.Database
             FileStream stockjsonfile = File.Open($"{projectDirectory}/../Database/StockJason.json", FileMode.OpenOrCreate);
             directory = projectDirectory + @"/../Database";
             Products = JsonSerializer.Deserialize<List<Product>>(Productjsonfile);
-
-
-
-
             stocks = JsonSerializer.Deserialize<List<Stock>>(stockjsonfile);
-
-
-
             Productjsonfile.Close();
             stockjsonfile.Close();
         }

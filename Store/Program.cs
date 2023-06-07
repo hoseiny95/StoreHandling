@@ -3,6 +3,7 @@ using Store.Domain;
 using Store.Exeption;
 using Store.Interface;
 using Store.service;
+using Store.service.Exception;
 
 var dbContext = new DbContext();
 var productRepository = new ProductRepository(dbContext);
@@ -16,6 +17,11 @@ try
 catch (ProductNotFoundException ex)
 {
     Console.WriteLine(ex.Message);
+}
+catch (ProductInStockNotFound ex)
+{
+    Console.WriteLine(ex.Message);
+
 }
 catch (Exception ex)
 {

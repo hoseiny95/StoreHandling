@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Store.Interface
 {
+    
     public class StockRepository : IStockRepository
     {
         private readonly DbContext db;
@@ -29,8 +31,8 @@ namespace Store.Interface
                 productnew.ProductQuantity = productInStock.ProductQuantity + productold.ProductQuantity;
                 productnew.StockId = productInStock.StockId;
                 productnew.Name = productInStock.Name;
-                productnew.ProductPrice = (productInStock.ProductPrice * productInStock.ProductQuantity
-                    + productold.ProductPrice * productold.ProductQuantity) / productnew.ProductQuantity;
+                productnew.ProductPrice = Math.Round((productInStock.ProductPrice * productInStock.ProductQuantity
+                    + productold.ProductPrice * productold.ProductQuantity) / productnew.ProductQuantity,2);
                 db.stocks.RemoveAll(x => x.ProductId == productInStock.ProductId);
                 db.stocks.Add(productnew);
                 db.StockSaveChanges();

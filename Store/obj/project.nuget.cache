@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ho0JEJborfwL+IHvonbmz8/T4gXq//d1oAiL3wBuK/kApvIIuUB208LJI3ShxFo1/v+CF9MZ1E7+T2bbF9D8CQ==",
+  "dgSpecHash": "XKazJyqOfBsIopE3EkWbNcdtjAtxe4MGe7+zMshKfrsk+xwtlWG2b/2bT3jgXZqXWf7EeI2XcqUdxhBYqVxVRA==",
   "success": true,
   "projectFilePath": "E:\\c project\\Store\\StoreHandling\\Store\\Store.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

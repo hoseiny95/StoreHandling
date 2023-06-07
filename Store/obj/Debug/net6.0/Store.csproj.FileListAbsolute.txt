@@ -13,3 +13,5 @@ E:\c project\Store\StoreHandling\Store\obj\Debug\net6.0\refint\Store.dll
 E:\c project\Store\StoreHandling\Store\obj\Debug\net6.0\Store.pdb
 E:\c project\Store\StoreHandling\Store\obj\Debug\net6.0\Store.genruntimeconfig.cache
 E:\c project\Store\StoreHandling\Store\obj\Debug\net6.0\ref\Store.dll
+E:\c project\Store\StoreHandling\Store\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+E:\c project\Store\StoreHandling\Store\obj\Debug\net6.0\Store.csproj.CopyComplete
